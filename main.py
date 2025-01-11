@@ -122,20 +122,12 @@ plt.title("Rasterized Map Interest Area")
 plt.show()
 
 
-
 # # Run Monte Carlo simulation to calculate the area of the area of interest
 approximated_area_of_interest = calculate_area(rasterized_matrix_interest)
 
 print()
 print(f"Real area of Interest: {area_of_interest.area.sum()} square units")
 print(f"Aproximated Area of Interest: {approximated_area_of_interest:.2f} square units")
-
-accepted_range = [area_of_interest.area.sum() - area_of_interest.area.sum() * 0.01, area_of_interest.area.sum() + area_of_interest.area.sum() * 0.01]
-
-if accepted_range[0] <= approximated_area_of_interest <= accepted_range[1]:
-    print(f"The approximated area of interest is in the accepted range")
-else:
-    print(f"The approximated area of interest is not in the accepted range")
 
 
 print()
